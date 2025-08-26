@@ -1,14 +1,23 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buttons';
+  info: {
+    displayName: 'Button';
+    icon: 'priceTag';
+  };
+  attributes: {
+    Button: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
     displayName: 'Media';
     icon: 'file-video';
   };
-  attributes: {
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-  };
+  attributes: {};
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -65,6 +74,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.button': SharedButton;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
