@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layout_new_arrivals",
+  "info": {
+    "displayName": "newArrival",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "rating": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

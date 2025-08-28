@@ -58,6 +58,16 @@
         "videos",
         "audios"
       ]
+    },
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": true
+    },
+    "HeroSection": {
+      "type": "component",
+      "component": "shared.sections",
+      "repeatable": false
     }
   }
 }

@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_layout_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "component": "layout.link",
+      "repeatable": true
+    },
+    "brandsCount": {
+      "type": "string"
+    },
+    "brandsLabel": {
+      "type": "string"
+    },
+    "productsCount": {
+      "type": "string"
+    },
+    "productsLabel": {
+      "type": "string"
+    },
+    "customersCount": {
+      "type": "string"
+    },
+    "customersLabel": {
+      "type": "string"
+    },
+    "OurClient": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
