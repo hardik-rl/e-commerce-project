@@ -515,10 +515,11 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    card: Schema.Attribute.Component<'layout.new-arrival', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    dressStyle: Schema.Attribute.Component<'layout.dress-zone', false>;
+    happyCustomer: Schema.Attribute.Component<'layout.happy-customer', false>;
     hero: Schema.Attribute.Component<'layout.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -526,8 +527,10 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::home-page.home-page'
     > &
       Schema.Attribute.Private;
+    newArrival: Schema.Attribute.Component<'layout.new-stock', false>;
+    newsLetter: Schema.Attribute.Component<'layout.news-letter', false>;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
+    topSelling: Schema.Attribute.Component<'layout.top-selling', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

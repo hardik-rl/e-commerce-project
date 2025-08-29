@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_dress_zones",
+  "info": {
+    "displayName": "DressZone",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "box": {
+      "type": "component",
+      "component": "layout.dress-style-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

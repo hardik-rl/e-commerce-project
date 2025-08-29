@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_new_stocks",
+  "info": {
+    "displayName": "new_stock",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "layout.new-arrival",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

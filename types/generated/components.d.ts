@@ -1,5 +1,54 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface LayoutCard extends Struct.ComponentSchema {
+  collectionName: 'components_layout_cards';
+  info: {
+    displayName: 'card';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    rating: Schema.Attribute.Decimal;
+  };
+}
+
+export interface LayoutDressStyleCard extends Struct.ComponentSchema {
+  collectionName: 'components_layout_dress_style_cards';
+  info: {
+    displayName: 'dressStyleCard';
+    icon: 'command';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface LayoutDressZone extends Struct.ComponentSchema {
+  collectionName: 'components_layout_dress_zones';
+  info: {
+    displayName: 'DressZone';
+    icon: 'dashboard';
+  };
+  attributes: {
+    box: Schema.Attribute.Component<'layout.dress-style-card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface LayoutHappyCustomer extends Struct.ComponentSchema {
+  collectionName: 'components_layout_happy_customers';
+  info: {
+    displayName: 'happyCustomer';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'layout.card', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
 export interface LayoutHero extends Struct.ComponentSchema {
   collectionName: 'components_layout_heroes';
   info: {
@@ -39,15 +88,49 @@ export interface LayoutLink extends Struct.ComponentSchema {
 export interface LayoutNewArrival extends Struct.ComponentSchema {
   collectionName: 'components_layout_new_arrivals';
   info: {
-    displayName: 'newArrival';
-    icon: 'shoppingCart';
+    displayName: 'card';
+    icon: 'dashboard';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files'>;
     price: Schema.Attribute.Integer;
-    rating: Schema.Attribute.String;
+    rating: Schema.Attribute.Decimal;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface LayoutNewStock extends Struct.ComponentSchema {
+  collectionName: 'components_layout_new_stocks';
+  info: {
+    displayName: 'new_stock';
+    icon: 'bell';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'layout.new-arrival', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface LayoutNewsLetter extends Struct.ComponentSchema {
+  collectionName: 'components_layout_news_letters';
+  info: {
+    displayName: 'newsLetter';
+    icon: 'envelop';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', false>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
+  };
+}
+
+export interface LayoutTopSelling extends Struct.ComponentSchema {
+  collectionName: 'components_layout_top_sellings';
+  info: {
+    displayName: 'topSelling';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'layout.new-arrival', true>;
+    heading: Schema.Attribute.Component<'shared.heading', false>;
   };
 }
 
@@ -69,7 +152,7 @@ export interface SharedHeading extends Struct.ComponentSchema {
     icon: 'bold';
   };
   attributes: {
-    heading: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -144,9 +227,16 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'layout.card': LayoutCard;
+      'layout.dress-style-card': LayoutDressStyleCard;
+      'layout.dress-zone': LayoutDressZone;
+      'layout.happy-customer': LayoutHappyCustomer;
       'layout.hero': LayoutHero;
       'layout.link': LayoutLink;
       'layout.new-arrival': LayoutNewArrival;
+      'layout.new-stock': LayoutNewStock;
+      'layout.news-letter': LayoutNewsLetter;
+      'layout.top-selling': LayoutTopSelling;
       'shared.button': SharedButton;
       'shared.heading': SharedHeading;
       'shared.media': SharedMedia;

@@ -11,18 +11,35 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "hero": {
       "type": "component",
       "component": "layout.hero",
       "repeatable": false
     },
-    "card": {
+    "newArrival": {
       "type": "component",
-      "component": "layout.new-arrival",
-      "repeatable": true
+      "component": "layout.new-stock",
+      "repeatable": false
+    },
+    "topSelling": {
+      "type": "component",
+      "component": "layout.top-selling",
+      "repeatable": false
+    },
+    "dressStyle": {
+      "type": "component",
+      "component": "layout.dress-zone",
+      "repeatable": false
+    },
+    "happyCustomer": {
+      "type": "component",
+      "component": "layout.happy-customer",
+      "repeatable": false
+    },
+    "newsLetter": {
+      "type": "component",
+      "component": "layout.news-letter",
+      "repeatable": false
     }
   }
 }
