@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_layout_dress_style_cards",
+  "info": {
+    "displayName": "dressStyleCard",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

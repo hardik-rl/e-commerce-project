@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_happy_customers",
+  "info": {
+    "displayName": "happyCustomer",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "component": "shared.heading",
+      "repeatable": false
+    },
+    "card": {
+      "type": "component",
+      "component": "layout.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
